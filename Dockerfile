@@ -5,3 +5,5 @@ RUN echo "deb http://repos.mesosphere.io/debian/ jessie main" > /etc/apt/sources
   apt-get -y update && \
   apt-get -y install mesos && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN ./bin/install-interpreter.sh --name file,livy
